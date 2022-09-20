@@ -1,0 +1,120 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    
+    transition: 0.5s;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    opacity: 0;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
+header:hover{
+    opacity: 1;
+}
+section{
+    /* background-color: orangered; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    
+    padding: 1em;
+    width: 1000px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.square{
+    width: 100%;
+    max-height: 300px;
+    background-color: white;
+    background-color: transparent;
+    transform-style: preserve-3d;
+    position: relative;
+    /* margin: 1em; */
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    /* background-color: #FFFFFF11; */
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 20px 20px 10px -20px #555;
+}
+.square:hover{box-shadow: 20px 20px 20px -20px #555;}
+
+audio{
+    width: 100%;
+    /* margin: 1em 0px; */
+    padding: 1em 0;
+}
+
+.poster{
+    /* max-width: 100%; */
+    /* max-height: 300px; */
+    object-fit: cover;
+    width: 100%;
+}
+.songs{
+    width: 300px;
+    width: 100%;
+    /* background-color: black; */
+    max-width: 100%;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0px 20px 20px 0px;
+    height: 100%;
+    overflow: auto;
+    z-index: 0px;
+    opacity: 0;
+    /* transform: translateZ(100%); */
+    width: 100%;
+    transform: translateX(100%);
+}
+.square:hover .songs{
+    /* left: 50%; */
+    transform: translateX(0%);
+    /* z-index: 4; */
+    opacity: 1;
+}
+.square:hover .poster{translate: -100% ;opacity: 0;}
+
+.square:hover img{
+    /* filter: blur(5px); */
+    /* scale: 1.1; */
+}
+
+
+.songs {
+    /* background-color: #FFFFFF99; */
+}
+.songs li{
+    background-color: #FFFFFF99;
+    color: black;
+    top: 100%;
+    margin-bottom: 1px;
+    padding: 0.5em;
+    cursor: pointer;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.songs li:hover{
+    background-color: #00000099;
+    color: white;
+    padding-left: 1em;
+    /* transition: 0.1s; */
+}
+
+.songs::-webkit-scrollbar {
+  width: 10px;
+}
+
+.songs::-webkit-scrollbar-thumb {
+  background: black;
+}
+
